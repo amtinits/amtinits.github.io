@@ -5,11 +5,11 @@ TIMEZONE = "America/Toronto"
 DEFAULT_LANG = "en"
 
 THEME = "simple"
-STYLESHEET_URL = "https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css"
+THEME_TEMPLATES_OVERRIDES = ["templates"]
 TYPOGRIFY = True
 
 PATH = "content"
-STATIC_PATHS = ["css"]
+STATIC_PATHS = ["css", "images"]
 DIRECT_TEMPLATES = ["index"]
 SLUGIFY_SOURCE = "basename"
 ARTICLE_URL = "{slug}/"
