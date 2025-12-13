@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <title>Andrew Tinits - Nonlinear Noise2Noise for Efficient Monte Carlo Denoiser Training</title>
+      <meta charset="utf-8" />
+      <meta name="generator" content="Pelican" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="/css/sakura-custom.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="/css/sakura-custom-dark.css" media="screen and (prefers-color-scheme: dark)" />
+
+
+  </head>
+
+  <body>
+      <header>
+          <hgroup><h1><a href="/">Andrew Tinits</a></h1></hgroup>
+          <nav><ul>
+          </ul></nav>
+      </header>
+      <main>
+  <article>
+    <header>
+      <h2>Nonlinear Noise2Noise for Efficient Monte Carlo Denoiser&nbsp;Training</h2>
+    </header>
+    
+
+    <p>Andrew Tinits and Stephen Mann<br>
+<span class="caps">SIGGRAPH</span> Asia 2025 Conference&nbsp;Papers</p>
+<p><img alt="Grid of model outputs" src="/images/grid_noit.jpg">
+<a href="">Paper (arXiv)</a><br>
+<a href="https://doi.org/10.1145/3757377.3763931">Paper (official)</a><br>
+<a href="">Slides (coming soon)</a><br>
+<a href="">Pretrained Models (coming&nbsp;soon)</a></p>
+<h4>Summary</h4>
+<p>We show that nonlinear functions can be safely applied to the noisy targets in Noise2Noise training
+to achieve practical benefits without adding significant bias. We demonstrate our method on a Monte
+Carlo denoising task, where our results approach those of clean references, but are produced using
+only noisy training&nbsp;data.</p>
+<h4>Abstract</h4>
+<p>The Noise2Noise method allows for training machine learning-based denoisers with pairs of input and
+target images where both the input and target can be noisy. This removes the need for training with
+clean target images, which can be difficult to obtain. However, Noise2Noise training has a major
+limitation: nonlinear functions applied to the noisy targets will skew the results. This bias occurs
+because the nonlinearity makes the expected value of the noisy targets different from the clean
+target image. Since nonlinear functions are common in image processing, avoiding them limits the
+types of preprocessing that can be performed on the noisy targets. Our main insight is that certain
+nonlinear functions can be applied to the noisy targets without adding significant bias to the
+results. We develop a theoretical framework for analyzing the effects of these nonlinearities, and
+describe a class of nonlinear functions with minimal&nbsp;bias.</p>
+<p>We demonstrate our method on the denoising of high dynamic range (<span class="caps">HDR</span>) images produced by Monte
+Carlo rendering, where generating high-sample count reference images can be prohibitively expensive.
+Noise2Noise training can have trouble with <span class="caps">HDR</span> images, where the training process is overwhelmed by
+outliers and performs poorly. We consider a commonly used method of addressing these training
+issues: applying a nonlinear tone mapping function to the model output and target images to reduce
+their dynamic range. This method was previously thought to be incompatible with Noise2Noise training
+because of the nonlinearities involved. We show that certain combinations of loss functions and tone
+mapping functions can reduce the effect of outliers while introducing minimal bias. We apply our
+method to an existing machine learning-based Monte Carlo denoiser, where the original implementation
+was trained with high-sample count reference images. Our results approach those of the original
+implementation, but are produced using only noisy training&nbsp;data.</p>
+<h4>BibTeX</h4>
+<div class="highlight"><pre><span></span><code><span class="err">@</span><span class="nx">inproceedings</span><span class="p">{</span><span class="m m-Double">10.1145</span><span class="o">/</span><span class="m m-Double">3757377.3763931</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="nx">Tinits</span><span class="p">,</span><span class="w"> </span><span class="nx">Andrew</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">Mann</span><span class="p">,</span><span class="w"> </span><span class="nx">Stephen</span><span class="p">},</span>
+<span class="w">    </span><span class="nx">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="nx">Nonlinear</span><span class="w"> </span><span class="nx">Noise2Noise</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">Efficient</span><span class="w"> </span><span class="nx">Monte</span><span class="w"> </span><span class="nx">Carlo</span><span class="w"> </span><span class="nx">Denoiser</span><span class="w"> </span><span class="nx">Training</span><span class="p">},</span>
+<span class="w">    </span><span class="nx">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="mi">2025</span><span class="p">},</span>
+<span class="w">    </span><span class="nx">isbn</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="mi">9798400721373</span><span class="p">},</span>
+<span class="w">    </span><span class="nx">publisher</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="nx">Association</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">Computing</span><span class="w"> </span><span class="nx">Machinery</span><span class="p">},</span>
+<span class="w">    </span><span class="nx">address</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="nx">New</span><span class="w"> </span><span class="nx">York</span><span class="p">,</span><span class="w"> </span><span class="nx">NY</span><span class="p">,</span><span class="w"> </span><span class="nx">USA</span><span class="p">},</span>
+<span class="w">    </span><span class="nx">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="nx">https</span><span class="p">:</span><span class="c1">//doi.org/10.1145/3757377.3763931},</span>
+<span class="w">    </span><span class="nx">doi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="m m-Double">10.1145</span><span class="o">/</span><span class="m m-Double">3757377.3763931</span><span class="p">},</span>
+<span class="w">    </span><span class="nx">booktitle</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="nx">Proceedings</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">SIGGRAPH</span><span class="w"> </span><span class="nx">Asia</span><span class="w"> </span><span class="mi">2025</span><span class="w"> </span><span class="nx">Conference</span><span class="w"> </span><span class="nx">Papers</span><span class="p">},</span>
+<span class="w">    </span><span class="nx">articleno</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="mi">49</span><span class="p">},</span>
+<span class="w">    </span><span class="nx">numpages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="mi">11</span><span class="p">},</span>
+<span class="w">    </span><span class="nx">keywords</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="nx">Noise2Noise</span><span class="p">,</span><span class="w"> </span><span class="nx">nonlinear</span><span class="w"> </span><span class="nx">functions</span><span class="p">,</span><span class="w"> </span><span class="nx">Jensen</span><span class="w"> </span><span class="nx">gap</span><span class="p">,</span><span class="w"> </span><span class="nx">Monte</span><span class="w"> </span><span class="nx">Carlo</span><span class="w"> </span><span class="nx">denoising</span><span class="p">,</span><span class="w"> </span><span class="nx">high</span><span class="w"> </span><span class="nx">dynamic</span><span class="w"> </span><span class="nx">range</span><span class="p">,</span><span class="w"> </span><span class="nx">tone</span><span class="w"> </span><span class="nx">mapping</span><span class="p">},</span>
+<span class="w">    </span><span class="nx">series</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="nx">SA</span><span class="w"> </span><span class="nx">Conference</span><span class="w"> </span><span class="nx">Papers</span><span class="w"> </span><span class="err">&#39;</span><span class="mi">25</span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+  </article>
+      </main>
+      <footer>
+      </footer>
+  </body>
+</html>
