@@ -6,9 +6,10 @@ Andrew Tinits and Stephen Mann
 SIGGRAPH Asia 2025 Conference Papers
 
 ![Grid of model outputs](/images/grid_noit.jpg)
-[Paper (arXiv)]()  
+[Paper (arXiv)](https://arxiv.org/abs/2512.24794)  
 [Paper (official)](https://doi.org/10.1145/3757377.3763931)  
-[Slides (coming soon)]()  
+[Slides (Keynote)](/files/nn2n.key)  
+[Slides (PowerPoint)](/files/nn2n.pptx)  
 [Pretrained Models (coming soon)]()
 
 #### Summary
