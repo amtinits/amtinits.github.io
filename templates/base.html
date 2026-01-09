@@ -11,6 +11,13 @@
       {% endif %}
       <link rel="stylesheet" type="text/css" href="/css/sakura-custom.css" media="screen" />
       <link rel="stylesheet" type="text/css" href="/css/sakura-custom-dark.css" media="screen and (prefers-color-scheme: dark)" />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9YB1TK93Q"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W9YB1TK93Q');
+      </script>
       {% if FEED_ALL_ATOM %}
         <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Full Atom Feed" />
       {% endif %}

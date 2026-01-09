@@ -61,3 +61,9 @@ implementation, but are produced using only noisy training data.
         keywords = {Noise2Noise, nonlinear functions, Jensen gap, Monte Carlo denoising, high dynamic range, tone mapping},
         series = {SA Conference Papers '25}
     }
+
+#### Contact
+
+The paper and slides are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+Questions and comments are welcome at amtinits (at) uwaterloo (dot) ca.
