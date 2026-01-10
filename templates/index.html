@@ -1,8 +1,6 @@
-{% extends "base.html" %}
-{% block content %}
-    {% block content_title %}
-    {% endblock %}
+{% extends "!simple/index.html" %}
 
+{% block content_title %}
     <img alt="Cornell box" width="256" src="/images/cornell_box.jpg">
     <p>I'm interested in computer graphics and machine learning.</p>
 
@@ -14,24 +12,4 @@
     <p><a href="/nn2n/">Nonlinear Noise2Noise for Efficient Monte Carlo Denoiser Training</a> <br>
        Andrew Tinits and Stephen Mann <br>
        SIGGRAPH Asia 2025 Conference Papers</p>
-
-    {% for article in articles_page.object_list %}
-        <article>
-            <header> <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
-            <section>{{ article.summary }}</section>
-            <footer>
-                <p>Published: <time datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time></p>
-                <address>By
-                    {% for author in article.authors %}
-                        <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-                    {% endfor %}
-                </address>
-            </footer>
-        </article>
-    {% endfor %}
-
-    {% if articles_page.has_other_pages() %}
-        {% include 'pagination.html' %}
-    {% endif %}
-
-{% endblock content %}
+{% endblock content_title %}
