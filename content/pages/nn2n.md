@@ -6,10 +6,9 @@ Andrew Tinits and Stephen Mann
 SIGGRAPH Asia 2025 Conference Papers
 
 ![Grid of model outputs](/images/grid_noit.jpg)
-[Paper (arXiv)](https://arxiv.org/abs/2512.24794)  
-[Paper (official)](https://doi.org/10.1145/3757377.3763931)  
-[Slides (Keynote)](/files/nn2n.key)  
-[Slides (PowerPoint)](/files/nn2n.pptx)  
+[Paper (arXiv)](https://arxiv.org/abs/2512.24794) [(official)](https://doi.org/10.1145/3757377.3763931)  
+[Slides (Keynote)](/files/nn2n_slides.key) [(PowerPoint)](/files/nn2n_slides.pptx)  
+[Poster (for Graphics Interface 2026)](/files/nn2n_poster.pdf)  
 [Pretrained Models (coming soon)]()
 
 #### Summary
@@ -46,7 +45,7 @@ implementation, but are produced using only noisy training data.
 
 #### BibTeX
 
-    @inproceedings{10.1145/3757377.3763931,
+    @inproceedings{tinits_nonlinear_2025,
         author = {Tinits, Andrew and Mann, Stephen},
         title = {Nonlinear Noise2Noise for Efficient Monte Carlo Denoiser Training},
         year = {2025},
@@ -64,6 +63,6 @@ implementation, but are produced using only noisy training data.
 
 #### Contact
 
-The paper and slides are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+The paper, slides, and poster are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 Questions and comments are welcome at amtinits (at) uwaterloo (dot) ca.
